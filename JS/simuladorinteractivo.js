@@ -27,4 +27,4 @@ function calcularPrecioAlquiler(numero1, numero2, numero3) {
         alert("Comunicate con nosotros a info@rentalpyp.com y te presupuestamos la mejor opción");
     }
 }
-calcularPrecioAlquiler()
+calcularPrecioAlquiler(6, 500, 1000)
