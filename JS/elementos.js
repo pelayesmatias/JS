@@ -1,28 +1,33 @@
-function sumarPrecio (precio1,precio2){
-    let resultado =precio1+precio2;
-    return resultado;
-}
-let primerPrecio = parseInt(prompt("Ingrese el precio del primer producto:"));
-let segundoPrecio = parseInt(prompt("Ingrese el precio del segundo producto:"));
-let totalCompraSinIva = sumarPrecio (primerPrecio, segundoPrecio);
-let aviso = (alert ("Por el aniversario de nuestra empresa te hacemos un descuento $500"))
-let descuento = 500;
-function calcularIva (preciosinIva){
-let total = preciosinIva *1.21;
-let precioFinalDescuento = total - descuento;
-console.log(("El precio final con IVA es: " + total));
-console.log(("El precio final con descuento es: " + precioFinalDescuento));
+let diasAlquiler=  parseInt(prompt("Ingrese días de alquiler"))
 
-return total;
-}
-function descuentoContado (precioFinalDescuento){
-return precioFinalDescuento;
-}
+function calcularPrecioAlquiler(numero1, numero2, numero3) {
 
-calcularIva(totalCompraSinIva)
-descuentoContado()
-sumarPrecio()
+    let precioAlquiler = 500;
+    let resultado = diasAlquiler * precioAlquiler;
+    let precioDescuentoSemana = 300;
+    let precioDescuentoQuincena = 1000;
+    let precioDescuentoMensual = 2000;
 
+    if (diasAlquiler <= 7) {
+        let precioSemana = ((diasAlquiler * precioAlquiler) - precioDescuentoSemana);
+        alert ("El Precio de tu alquiler es " + precioSemana);
+    }
+    else if ((diasAlquiler >= 8) && (diasAlquiler <= 14)) {
+        let precioQuincena = ((diasAlquiler * precioAlquiler) - precioDescuentoQuincena);
+        alert ("El Precio de tu alquiler es " + precioQuincena);
+
+    }
+    else if ((diasAlquiler >= 15) && (diasAlquiler <= 30)) {
+        let precioMensual = ((diasAlquiler * precioAlquiler) - precioDescuentoMensual);
+        alert ("El Precio de tu alquiler es " + precioMensual);
+
+    }
+
+    else {
+        alert("Comunicate con nosotros y te presupuestamos la mejor opción");
+    }
+}
+calcularPrecioAlquiler()
 
 
 
