@@ -4,25 +4,171 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <meta name="keywords"
+      content="alquiler, alquiler herramientas, alquiler maquinarias, alquiler trabajo en altura,Mendoza, Argentina, alquileres Mendoza, Rental, martillo, andamios, escaleras, amoladora, ferretería">
+    <link rel="stylesheet" href="css/estiloscss.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <title>Rental P&P Alquiler Home</title>
+    <link rel="shortcut icon" href="imagenes/imglogo.png">
+    <meta name="description"
+      content="Alquiler de maquinarias y herramientas para la construcción, metalúrgica y plomería-gas, jardinería, uso industrial y particular. Mendoza, Argentina">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  </head>
 <body>
-<h2>Desafío: Simulador interactivo</h2>
-<p>El objetivo de mi proyecto es poder llevar a cabo un cotizador de alquileres de herramientas y maquinarias de uso particular e industrial para llevar a cavo  roturas y demoliciones, trabajos en altura y tratamiento de suelo.</p>
-<p>En mi proyecto de Desarrollo Web realicé la estructura HTML y CSS pero me falta esa parte para complementarla</p>
-<ol>
-   
-    <li>El usuario ingresa a la web</li>
-    <li>Elige si es empresa (factura A + IVA) o particular</li>
-    <li>Dependiendo de su elección se calcula precio con IVA o sin IVA</li>
-    <li>Selecciona herramienta/maquinaria a alquilar haciendo click en el botón alquilar</li>
-    <li>Se despliega opción en la cual puede seleccionar días de alquiler</li>
-    <li>En base al producto elegido y días de alquiler se realiza un cálculo</li>
-    <li>A la vez, se ofrecen descuentos por arrendar en tiempos prolongados, por ejemplo pagás 4 días y te lo llevás 7 días</li>
-</ol>
+    
+<header class="header table-responsive-sm">
+    <div class="header__Cabecera">
+      <table class="table hidden header__TablaCab">
+        <thead class="header__thead ">
+          <tr>
+            <th class="col animation header__Clogo" scope="col"><img
+                srcset="imagenes/imglogoHD.png 3x, imagenes/imglogoMD.png 2x, imagenes/imglogo.png 1x"
+                src="imagenes/imglogoHD.png" alt=""></th>
+            <th class="col animation header__Titulo" scope="col">RENTAL P&P</th>
+            <th class="col header__Boton" scope="col"><a href="construccion.html"><button type="button"
+                  class="btn-sm btn-warning">Registrarse</button></a></th>
+            <th class="col header__Boton" scope="col"><a href="construccion.html"><button type="button"
+                  class="btn-sm btn-warning">Iniciar sesión</button></a></th>
+            <th class="col header__Carrito" scope="col"><a href="construccion.html"><img src="imagenes/imgCarrito.png"
+                  alt=""></a></th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </header>
+
+  <!--fin header-->
+
+  <!--inicio nav-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning justify-content-center x-5 sticky-top">
+    <div class="btn-group">
+      <a href="index.html" class="btn btn-warning btn-md">Home</a>
+    </div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-warning btn-md dropdown-toggle" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        Categorías
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item fs-6" href="categorias.html#HyM">Herramientas y Maquinarias</a></li>
+        <li><a class="dropdown-item fs-6" href="categorias.html#RyD">Rotura y Demolición</a></li>
+        <li><a class="dropdown-item fs-6" href="categorias.html#TeA">Trabajo en Altura</a></li>
+        <li><a class="dropdown-item fs-6" href="categorias.html#Ter">Terreno</a></li>
+      </ul>
+    </div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-warning btn-md dropdown-toggle" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        Tutoriales
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item fs-6" href="tutoriales.html#THyM">Herramientas y Maquinarias</a></li>
+        <li><a class="dropdown-item fs-6" href="tutoriales.html#TRyD">Rotura y Demolición</a></li>
+        <li><a class="dropdown-item fs-6" href="tutoriales.html#TTeA">Trabajo en Altura</a></li>
+        <li><a class="dropdown-item fs-6" href="tutoriales.html#TTer">Terreno</a></li>
+      </ul>
+    </div>
+
+    <div class="btn-group">
+      <button type="button" class="btn btn-warning btn-md dropdown-toggle" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        Quiénes Somos
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item fs-6" href="quienessomos.html#Historia">Nuestra Historia</a></li>
+        <li><a class="dropdown-item fs-6" href="quienessomos.html#Vision">Visión</a></li>
+        <li><a class="dropdown-item fs-6" href="quienessomos.html#Mision">Misión</a></li>
+        <li><a class="dropdown-item fs-6" href="quienessomos.html#Valores">Valores</a></li>
+      </ul>
+    </div>
+    <div class="btn-group">
+      <a href="contacto.html" class="btn btn-warning btn-md">Contacto</a>
+    </div>
+  </nav>
+  <!--fin nav-->
+
+  <!--inicio main-->
+  <main>
+
+    <!--inicio categorías herramientas y maquinarias-->
+    <h2 id="HyM" data-aos="zoom-in-up">Herramientas y Maquinarias</h2>
+    <img src="" alt="" class="imagenCategoria" data-aos="zoom-in-up">
+    <div class="accordion" id="accordionExample">
+      <!--inicio amoladoras-->
+      <div class="accordion-item">
+        <h3 class="accordion-header" id="headingOne">
+          <button class="accordion-button bg-warning fs-4" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Amoladoras
+          </button>
+        </h3>
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <section>
+              <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                  <div class="card card border-warning mb-3" style="width: 100%; height: 100%; padding-top: 10px;">
+                    <h4 class="card-title text-center">AMOLADORA ANGULAR AG 125-13S</h4>
+                    <img src="imagenes/imgAmoladora125-13S.png" class="card-img-top imagenTabla" alt="...">
+                    <div class="card-body">
+                      <p class="card-text text-center">Amoladora angular de 1300W con escobillas de carbón de larga vida
+                        útil para tareas de corte y desbaste con discos de hasta 125 mm de diámetro</p>
+                      <p class="card-text text-center fw-bold">Alquiler por día $1200</p>
+                      <a href="construccion.html" class="btn btn-warning">Alquilar</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card card border-warning mb-3" style="width: 100%; height: 100%; padding-top: 10px">
+                    <h4 class="card-title text-center">AMOLADORA ANGULAR AG 180-P</h4>
+                    <img src="imagenes/imgAmoladora230-24D.png" class="card-img-top imagenTabla" alt="...">
+                    <div class="card-body">
+                      <p class="card-text text-center">Amoladora angular de 2000 W con interruptor de encendido/apagado
+                        estándar, para aplicaciones en metal con discos de hasta 180 mm</p>
+                      <p class="card-text text-center fw-bold">Alquiler por día $1800</p>
+                      <a href="construccion.html" class="btn btn-warning ">Alquilar</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card card border-warning mb-3" style="width: 100%; height: 100%; padding-top: 10px">
+                    <h4 class="card-title text-center">AMOLADORA ANGULAR AG 230-24D</h4>
+                    <img src="imagenes/imgAmoladora230-24D.png" class="card-img-top imagenTabla" alt="...">
+                    <div class="card-body">
+                      <p class="card-text text-center">Amoladora angular de 2400 W con interruptor de emergencia de tipo
+                        "deadman", empuñadura giratoria y escobillas de carbono de larga duración para discos de hasta
+                        230 mm
+                      </p>
+                      <p class="card-text text-center fw-bold">Alquiler por día $2200</p>
+                      <a href="construccion.html" class="btn btn-warning">Alquilar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--fin amoladoras-->
 
 
-<script src="JS/DesafioOrdenarArrays.js"> </script>
+  </main>
+  
+<script src="JS/proyectojs.js"> </script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
 
 </body>
 </html>
