@@ -22,8 +22,6 @@ Amoladora.push(AmoladoraA)
 const AmoladoraB = new Maquina({ id: 5, tipo: "AMOLADORA", modelo: "ANGULAR A BATERIA", tamanio: "115 mm", potencia: "36 V equipado con motor sin escobillas", precio: 2000, disponible: true, stock: 7 })
 Amoladora.push(AmoladoraB)
 
-
-
 const OrdenarPrecio = (precio) => {
     Amoladora.sort((a, b) => {
         if (a[precio] > b[precio]) {
@@ -45,20 +43,23 @@ let precioMaquina;
 let resultado = diasElegido * precioMaquina;
 const Agregar = []
 
+
+
 maquinaElegida = prompt("Elige una amoladora: ANGULAR 4 - ANGULAR 5 - ANGULAR 7 - ANGULAR 9 - ANGULAR A BATERÍA");
 cantidadElegida = parseInt(prompt("¿Qué cantidad necesitás?"))
 diasElegido = parseInt(prompt("Indique cantidad de días de alquiler"))
 
-function elegirMaquina(maquinaElegida, cantidadElegida, diasElegido) {
-  
-       alert  ("Tu elección es Amoladora"+" "+ maquinaElegida +" "+ "por" +" " + cantidadElegida +" "+ "unidades. Los días de alquiler son"+ " " + diasElegido+" "+ "días")
- return maquinaElegida, cantidadElegida, diasElegido
+function elegirMaquina (maquinaElegida, cantidadElegida, diasElegido) {
+  let divAmoladora = document.createElement ("div");
+  divAmoladora.innerHTML="Bienvenido!! Tu elección es Amoladora"+" "+ maquinaElegida.toUpperCase() +" "+ "por" +" " + cantidadElegida +" "+"unidades"+ " "+"y"+ " " + diasElegido+" "+ "días de alquiler."
+ document.getElementById("HyM").appendChild (divAmoladora)
+  return maquinaElegida, cantidadElegida, diasElegido
 }
 
 
-function corroborarStock(maquinaElegida, cantidad){
+function corroborarStock(maquinaElegida, cantidadElegida){
     const indiceMaquina = Amoladora.findIndex(
-        (maquina) => maquina.modelo === maquinaElegida);
+        (maquina) => maquina.modelo === maquinaElegida.toUpperCase());
         const maquina = Amoladora [indiceMaquina];
         
     if(maquina.stock > cantidadElegida){
@@ -71,9 +72,8 @@ function corroborarStock(maquinaElegida, cantidad){
 
 }
 
-OrdenarPrecio("precio")
-console.log(Amoladora)
-elegirMaquina(maquinaElegida, cantidadElegida, diasElegido)
-console.log(maquina)
-corroborarStock(maquinaElegida, cantidadElegida)
-console.log(maquina)
+OrdenarPrecio("precio");
+console.log(Amoladora);
+elegirMaquina(maquinaElegida, cantidadElegida, diasElegido);
+corroborarStock(maquinaElegida, cantidadElegida);
+
